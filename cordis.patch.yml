@@ -1,0 +1,8 @@
+# dsh-plugin-loopback-trust
+# Marks the web page's connection as host-owning (ownsHost) so the settings
+# pages keep Host persistence when dsh web is reached through a reverse
+# proxy on a non-loopback hostname. All logic lives in the client entry.
+
+- insert:
+    - id: loopback-trust
+      name: 'dsh-plugin-loopback-trust'

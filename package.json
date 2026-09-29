@@ -1,0 +1,28 @@
+{
+  "name": "dsh-plugin-loopback-trust",
+  "version": "0.1.0",
+  "description": "Restore Host-persisted settings in dsh web behind a reverse proxy: marks the page's connection as host-owning so the settings/model pages work on non-loopback hostnames. · 反代部署下恢复 dsh 设置页的 host 持久化。",
+  "license": "MIT",
+  "type": "module",
+  "exports": { ".": "./index.js", "./client": "./client.js" },
+  "engines": { "dsh": ">=0.1.7 <0.2" },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "reverse-proxy",
+    "settings"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6mt/dsh-plugin-loopback-trust.git"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
