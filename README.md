@@ -32,7 +32,8 @@ connection state.
 - Sits in the boot prefetch tier and runs before any client plugin applies
 - Never clobbers a real (desktop) transport; does nothing on loopback pages
 - Zero dependencies, no host-side code, ~60 lines of client JavaScript
-- Requires dsh **0.1.7** (`engines.dsh: ">=0.1.7 <0.2"`)
+- Requires dsh **0.1.7 – 0.2.x** (`engines.dsh: ">=0.1.7 <0.3"`; verified against
+  0.1.7 and 0.2.0-rc.2)
 
 ## Install
 

@@ -28,7 +28,7 @@ nginx（或任意反向代理）、你用域名打开界面时，页面被判定
 - 挂在 boot 预取档，先于任何客户端插件 apply 执行
 - 绝不覆盖真实（桌面端）transport；loopback 页面上不做任何事
 - 零依赖、无宿主端代码，约 60 行客户端 JavaScript
-- 需要 dsh **0.1.7**（`engines.dsh: >=0.1.7 <0.2`）
+- 需要 dsh **0.1.7 – 0.2.x**（`engines.dsh: ">=0.1.7 <0.3"`，已对 0.1.7 与 0.2.0-rc.2 验证）
 
 ## 安装
 
@@ -80,7 +80,7 @@ loopback 的页面开放。安装本插件等于为你的部署宣告“这个 o
 ## 兼容性
 
 钩子点都是 dsh 0.1.7 的内部实现（`__DSH_TRANSPORT__.ownsHost` 语义、预取档
-时序、`$host` 缓存），无兼容承诺。包声明了 `engines.dsh: ">=0.1.7 <0.2"`，
+时序、`$host` 缓存），无兼容承诺。包声明了 `engines.dsh: ">=0.1.7 <0.3"`，
 不兼容的宿主会拒绝安装而不是静默损坏。损坏时的表现很醒目（设置页回到
 unavailable 状态）——对照你安装版本的
 [dsh-client-connection](https://www.npmjs.com/package/@deepseek-ai/dsh-client-connection)
